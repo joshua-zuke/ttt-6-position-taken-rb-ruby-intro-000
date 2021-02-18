@@ -8,6 +8,39 @@
 # or an "O". If the position is free, the method should return
 # false (i.e. "not taken"); otherwise it will return true.
 
+
+# SOLUTION 1
+
 def position_taken?(board, index)
   board[index] == "X" || board[index] == "O"
+end
+
+# SOLUTION 2
+
+def position_taken?(board, index)
+  if (board[index] == "" || board[index] == " " || board[index]== nil)
+    false
+  else
+    true
+  end
+end
+
+# SOLUTION 3
+
+def position_taken?(board, index)
+  if (board[index] == "" || board[index] == " " || board[index]== nil)
+    taken = false
+  else
+    taken = true
+  end
+end
+
+# SOLUTION 4
+
+def position_taken?(board, index)
+  if (board[index] == "" || board[index] == " " || board[index]== nil)
+    false
+  elsif (board[index] == "X" || board[index] == "O")
+    true
+  end
 end
